@@ -19,6 +19,7 @@ public class Account {
         int value = list.get(random.nextInt(list.size()));
         this.balance += value;
         System.out.printf("%s depositou %d na conta%n",Thread.currentThread().getName(), value);
+        System.out.printf("Saldo: %d %n", this.balance);
         System.out.flush();
 
     }
@@ -40,6 +41,7 @@ public class Account {
             int value = list.get(random.nextInt(list.size()));
             this.balance -= value;
             System.out.printf("%s sacou %d da conta%n",Thread.currentThread().getName(), value);
+            System.out.printf("Saldo: %d %n", this.balance);
             System.out.flush();
         }
     }
